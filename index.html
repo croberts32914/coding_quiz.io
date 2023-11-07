@@ -1,63 +1,879 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-<style>
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.flashcard {
-    width: 200px;
-    height: 300px;
-    perspective: 1000px;
-}
-
-.card {
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-}
-
-.card-face {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-}
-
-.card-front {
-    background-color: #3498db;
-    color: #fff;
-}
-
-.card-back {
-    background-color: #e74c3c;
-    color: #fff;
-    transform: rotateY(180deg
-</style>
+    <title>HTML Flashcards</title>
+    <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #db1a88;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+        
+            #flashcards-container {
+                width: 500px;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                text-align: center; /* Add this line */
+                border: 2px solid black; /* Add this line for the black border */
+                text-align: center;
+            }
+            
+    
+        
+            h1 {
+                text-align: center;
+            }
+        
+            .flashcard {
+                display: none;
+            }
+        
+            .current-flashcard {
+                display: block;
+            }
+        
+            .navigation-button {
+                margin-top: 10px;
+            }        
+    </style>
 </head>
+
 <body>
+    <div id="flashcards-container">
+        <h1>HTML Flashcards</h1>
+
+        <!-- html flashcards -->
+    <!-- Flashcard 1 -->
     <div class="flashcard">
-        <div class="card">
-            <div class="card-face card-front">
-                <p>Question</p>
-            </div>
-            <div class="card-face card-back">
-                <p>Answer</p>
-            </div>
-        </div>
+        <h3>What does HTML stand for?</h3>
+        <p>Answer: Hyper Text Markup Language</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
     </div>
-    <button onclick="flipCard()">Flip Card</button>
-    <script src="script.js"></script>
-</body>
-</html>
+
+        <!-- Flashcard 2 -->
+                <div class="flashcard">
+            <h3>Which HTML tag is used to create a hyperlink?</h3>
+            <p>Answer: &lt;a&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 3 -->
+        <div class="flashcard">
+            <h3>What is the correct HTML for creating a hyperlink?</h3>
+            <p>Answer: &lt;a href="https://www.example.com"&gt;Click here&lt;/a&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 4 -->
+        <div class="flashcard">
+            <h3>How do you create an ordered list in HTML?</h3>
+            <p>Answer: &lt;ol&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 5 -->
+        <div class="flashcard">
+            <h3>What does CSS stand for?</h3>
+            <p>Answer: Cascading Style Sheet</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 6 -->
+        <div class="flashcard">
+            <h3>How can you change the text color of an element in CSS?</h3>
+            <p>Answer: color: blue;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 7 -->
+        <div class="flashcard">
+            <h3>What is the purpose of JavaScript?</h3>
+            <p>Answer: To make web pages interactive</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 8 -->
+        <div class="flashcard">
+            <h3>How do you declare a variable in JavaScript?</h3>
+            <p>Answer: var</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 9 -->
+        <div class="flashcard">
+            <h3>What is the correct way to comment out code in HTML?</h3>
+            <p>Answer: &lt;!-- This is a comment --&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 10 -->
+        <div class="flashcard">
+            <h3>Which HTML element is used to define important text?</h3>
+            <p>Answer: &lt;strong&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 11 -->
+        <div class="flashcard">
+            <h3>How do you insert a line break in HTML?</h3>
+            <p>Answer: &lt;br&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 12 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the &lt;div&gt; element in HTML?</h3>
+            <p>Answer: To group and style content</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 13 -->
+        <div class="flashcard">
+            <h3>Which HTML element defines the structure of an HTML document?</h3>
+            <p>Answer: &lt;!DOCTYPE&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 14 -->
+        <div class="flashcard">
+            <h3>How do you create an unordered list in HTML?</h3>
+            <p>Answer: &lt;ul&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 15 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the CSS property "margin"?</h3>
+            <p>Answer: It adds space outside the element</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 16 -->
+        <div class="flashcard">
+            <h3>Which symbol is used to access elements by their ID in JavaScript?</h3>
+            <p>Answer: #</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 17 -->
+        <div class="flashcard">
+            <h3>What does the CSS property "font-size" control?</h3>
+            <p>Answer: The size of text</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 18 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the HTML &lt;meta&gt; element?</h3>
+            <p>Answer: Providing metadata about the document</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 19 -->
+        <div class="flashcard">
+            <h3>How do you create a comment in JavaScript?</h3>
+            <p>Answer: // This is a comment</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 20 -->
+        <div class="flashcard">
+            <h3>Which HTML tag is used for creating a link to an external CSS file?</h3>
+            <p>Answer: &lt;link&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 21 -->
+        <div class="flashcard">
+            <h3>What does the "href" attribute in an &lt;a&gt; tag specify?</h3>
+            <p>Answer: The URL of the linked page</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 22 -->
+        <div class="flashcard">
+            <h3>How do you write an external JavaScript file and link it to an HTML page?</h3>
+            <p>Answer: &lt;script src="script.js"&gt;&lt;/script&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 23 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the HTML &lt;head&gt; element?</h3>
+            <p>Answer: It contains metadata about the document</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 24 -->
+        <div class="flashcard">
+            <h3>How do you create a function in JavaScript?</h3>
+            <p>Answer: function myFunction()</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 25 -->
+        <div class="flashcard">
+            <h3>Which HTML tag is used for creating an image in a web page?</h3>
+            <p>Answer: &lt;img&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 26 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the CSS property "padding"?</h3>
+            <p>Answer: It adds space inside the element</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 27 -->
+        <div class="flashcard">
+            <h3>Which CSS property is used to change the text color of an element when hovering over it?</h3>
+            <p>Answer: color</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 28 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the JavaScript "if" statement?</h3>
+            <p>Answer: To make decisions in code</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 29 -->
+        <div class="flashcard">
+            <h3>How do you declare a constant variable in JavaScript?</h3>
+            <p>Answer: const</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 30 -->
+        <div class="flashcard">
+            <h3>What is the correct way to comment out multiple lines of code in JavaScript?</h3>
+            <p>Answer: /* This is a comment */</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+
+        <!-- Flashcard 31 -->
+    <div class="flashcard">
+        <h3>What does CSS stand for?</h3>
+        <p>Answer: Cascading Style Sheets</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+        <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+    </div>
+        
+        <!-- Flashcard 32 -->
+        <div class="flashcard">
+            <h3>How do you create a comment in HTML?</h3>
+            <p>Answer: &lt;!-- This is a comment --&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 33 -->
+        <div class="flashcard">
+            <h3>Which HTML tag is used to define the structure of an HTML document?</h3>
+            <p>Answer: &lt;!DOCTYPE&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 34 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the &lt;head&gt; element in HTML?</h3>
+            <p>Answer: It contains metadata about the document</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 35 -->
+        <div class="flashcard">
+            <h3>Which HTML tag is used to create a table?</h3>
+            <p>Answer: &lt;table&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 36 -->
+        <div class="flashcard">
+            <h3>What is the correct HTML for adding a background color to an element?</h3>
+            <p>Answer: style="background-color: #ffffff;"</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 37 -->
+        <div class="flashcard">
+            <h3>How can you create a hyperlink that opens in a new tab?</h3>
+            <p>Answer: &lt;a href="https://www.example.com" target="_blank"&gt;Link&lt;/a&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 38 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the HTML &lt;meta&gt; element?</h3>
+            <p>Answer: Providing metadata about the document</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 39 -->
+        <div class="flashcard">
+            <h3>How do you create a numbered list in HTML?</h3>
+            <p>Answer: &lt;ol&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 40 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the CSS property "padding"?</h3>
+            <p>Answer: It adds space inside the element</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 41 -->
+        <div class="flashcard">
+            <h3>How do you create a hyperlink with no underline?</h3>
+            <p>Answer: &lt;a href="https://www.example.com" style="text-decoration: none;"&gt;Link&lt;/a&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 42 -->
+        <div class="flashcard">
+            <h3>Which CSS property is used to center-align text?</h3>
+            <p>Answer: text-align: center;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 43 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the &lt;div&gt; element in HTML?</h3>
+            <p>Answer: To group and style content</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 44 -->
+        <div class="flashcard">
+            <h3>How do you add a background image to a webpage in CSS?</h3>
+            <p>Answer: background-image: url('image.jpg');</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 45 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the JavaScript "if" statement?</h3>
+            <p>Answer: To make decisions in code</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 46 -->
+        <div class="flashcard">
+            <h3>How do you create a function in JavaScript?</h3>
+            <p>Answer: function myFunction()</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 47 -->
+        <div class="flashcard">
+            <h3>Which HTML element is used to create a form for user input?</h3>
+            <p>Answer: &lt;form&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 48 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the "for" attribute in a &lt;label&gt; element?</h3>
+            <p>Answer: It connects the label to an input element</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 49 -->
+        <div class="flashcard">
+            <h3>How do you create a dropdown list in HTML?</h3>
+            <p>Answer: &lt;select&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 50 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the JavaScript "for" loop?</h3>
+            <p>Answer: To iterate over a sequence of values</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 51 -->
+        <div class="flashcard">
+            <h3>How do you change the font size of text in CSS?</h3>
+            <p>Answer: font-size: 16px;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 52 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the HTML &lt;a&gt; element?</h3>
+            <p>Answer: It defines a hyperlink</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 53 -->
+        <div class="flashcard">
+            <h3>How do you define a constant variable in JavaScript?</h3>
+            <p>Answer: const</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 54 -->
+        <div class="flashcard">
+            <h3>Which HTML tag is used to create an image in a web page?</h3>
+            <p>Answer: &lt;img&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 55 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the CSS property "border"?</h3>
+            <p>Answer: It defines the border of an element</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 56 -->
+        <div class="flashcard">
+            <h3>How do you create a list item in HTML?</h3>
+            <p>Answer: &lt;li&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 57 -->
+        <div class="flashcard">
+            <h3>What does the "src" attribute in an &lt;img&gt; tag specify?</h3>
+            <p>Answer: The source file of the image</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 58 -->
+        <div class="flashcard">
+            <h3>How do you create a button in HTML?</h3>
+            <p>Answer: &lt;button&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 59 -->
+        <div class="flashcard">
+            <h3>What is the purpose of the CSS property "text-decoration"?</h3>
+            <p>Answer: It controls text decoration, such as underlines</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Flashcard 60 -->
+        <div class="flashcard">
+            <h3>How do you link an external JavaScript file to an HTML document?</h3>
+            <p>Answer: &lt;script src="script.js"&gt;&lt;/script&gt;</p>
+            <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+        </div>
+        
+        <!-- Javascript Flashcards -->
+<!-- Flashcard 61 -->
+<div class="flashcard">
+    <h3>What is the difference between "null" and "undefined" in JavaScript?</h3>
+    <p>Answer: "null" is an intentional absence of any value, while "undefined" means a variable has been declared but
+        has not been assigned a value.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 62 -->
+<div class="flashcard">
+    <h3>What's the difference between "let," "var," and "const" when declaring variables?</h3>
+    <p>Answer: "let" and "const" are block-scoped, while "var" is function-scoped. "const" is used for constant values,
+        while "let" and "var" can be reassigned.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 63 -->
+<div class="flashcard">
+    <h3>How do you write a "for" loop in JavaScript?</h3>
+    <p>Answer:
+        ```javascript
+        for (let i = 0; i < 5; i++) { // Your code here } ``` </p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+            <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 64 -->
+<div class="flashcard">
+    <h3>Explain the concept of hoisting in JavaScript.</h3>
+    <p>Answer: Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their
+        containing scope during compilation, making them accessible before they're declared.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 65 -->
+<div class="flashcard">
+    <h3>What is a closure in JavaScript?</h3>
+    <p>Answer: A closure is a function that has access to its own scope, the outer function's scope, and the global
+        scope, allowing it to "remember" variables even after the outer function has finished executing.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 66 -->
+<div class="flashcard">
+    <h3>Explain the purpose of the "this" keyword in JavaScript.</h3>
+    <p>Answer: "this" refers to the current execution context and can change its value based on how a function is
+        called. It's commonly used to access object properties within methods.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 67 -->
+<div class="flashcard">
+    <h3>What is event delegation in JavaScript, and why is it useful?</h3>
+    <p>Answer: Event delegation is a technique where a single event handler is attached to a common ancestor of multiple
+        elements. It's useful for improving performance and simplifying event handling in large DOM structures.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 68 -->
+<div class="flashcard">
+    <h3>How do you add an element to an array in JavaScript?</h3>
+    <p>Answer: You can use the "push" method to add an element to the end of an array, or the "unshift" method to add it
+        to the beginning of the array.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 69 -->
+<div class="flashcard">
+    <h3>Explain the difference between "==" and "===" in JavaScript.</h3>
+    <p>Answer: "==" checks for equality after type coercion, while "===" checks for strict equality without type
+        coercion, meaning both value and type must match.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 70 -->
+<div class="flashcard">
+    <h3>What is the purpose of the "JSON" object in JavaScript?</h3>
+    <p>Answer: The "JSON" object is used for parsing and stringifying JSON (JavaScript Object Notation) data, which is a
+        lightweight data interchange format.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 71 -->
+<div class="flashcard">
+    <h3>What is the difference between "map" and "forEach" in JavaScript?</h3>
+    <p>Answer: Both "map" and "forEach" are used to iterate over arrays, but "map" returns a new array with the results
+        of the provided function, while "forEach" simply iterates without returning a new array.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 72 -->
+<div class="flashcard">
+    <h3>Explain the "prototype" in JavaScript and its relation to objects.</h3>
+    <p>Answer: The "prototype" is an object that is associated with every function and object in JavaScript. It allows
+        objects to inherit properties and methods from other objects, creating a prototype chain.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 73 -->
+<div class="flashcard">
+    <h3>What is the "event loop" in JavaScript?</h3>
+    <p>Answer: The event loop is a core concept in JavaScript's concurrency model. It's responsible for managing the
+        execution of code, handling asynchronous operations, and responding to events like user interactions.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 74 -->
+<div class="flashcard">
+    <h3>How do you create an object in JavaScript?</h3>
+    <p>Answer: You can create an object using object literals like this:
+        ```javascript
+        const myObject = {
+        key1: 'value1',
+        key2: 'value2',
+        };
+        ```
+    </p>
+    <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 75 -->
+<div class="flashcard">
+    <h3>What is a callback function in JavaScript?</h3>
+    <p>Answer: A callback function is a function passed as an argument to another function, and it's executed after the
+        completion of the parent function. Callbacks are often used for handling asynchronous operations.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 76 -->
+<div class="flashcard">
+    <h3>Explain the concept of "promises" in JavaScript.</h3>
+    <p>Answer: Promises are objects representing the eventual completion or failure of an asynchronous operation. They
+        provide a more structured way to handle asynchronous code compared to callbacks.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 77 -->
+<div class="flashcard">
+    <h3>What is the "localStorage" in JavaScript, and how is it used?</h3>
+    <p>Answer: "localStorage" is a web storage feature that allows you to store key-value pairs in a web browser. It's
+        often used for storing data locally on a user's device.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 78 -->
+<div class="flashcard">
+    <h3>Explain the concept of "asynchronous programming" in JavaScript.</h3>
+    <p>Answer: Asynchronous programming is a programming pattern that allows multiple tasks to be executed concurrently
+        without blocking the main thread. It's essential for tasks like fetching data from the web or handling user
+        input.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 79 -->
+<div class="flashcard">
+    <h3>How do you handle errors in JavaScript using "try...catch"?</h3>
+    <p>Answer: You can use a "try...catch" block to catch and handle exceptions in JavaScript. Code within the "try"
+        block is executed, and if an error occurs, it's caught and processed in the "catch" block.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 80 -->
+<div class="flashcard">
+    <h3>Explain the difference between "null" and "undefined" in JavaScript.</h3>
+    <p>Answer: "null" is an explicit value representing the absence of any object value, while "undefined" indicates
+        that a variable has been declared but hasn't been assigned a value.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 81 -->
+<div class="flashcard">
+    <h3>What is the "RESTful" architecture in web development?</h3>
+    <p>Answer: RESTful is an architectural style for designing networked applications. It's based on a set of
+        principles, including stateless communication, using HTTP methods, and representing resources as URLs.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 82 -->
+<div class="flashcard">
+    <h3>What are arrow functions in JavaScript, and how do they differ from regular functions?</h3>
+    <p>Answer: Arrow functions are a more concise way to write function expressions in JavaScript. They have a shorter
+        syntax and inherit the "this" value from their surrounding code, making them useful in certain contexts.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 83 -->
+<div class="flashcard">
+    <h3>What is the purpose of "AJAX" in web development?</h3>
+    <p>Answer: AJAX (Asynchronous JavaScript and XML) is a set of web development techniques that allow web pages to
+        fetch data from a server without needing to refresh the entire page. It's used to create responsive and dynamic
+        web applications.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 84 -->
+<div class="flashcard">
+    <h3>Explain the concept of "hoisting" in JavaScript.</h3>
+    <p>Answer: Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their
+        containing scope during compilation. This means you can use variables and functions before they're declared in
+        the code.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 85 -->
+<div class="flashcard">
+    <h3>What is the "DOM" in web development, and how is it used?</h3>
+    <p>Answer: The DOM (Document Object Model) is a representation of the structure and content of a web page, created
+        by the browser. It allows developers to access and manipulate HTML and XML documents using programming languages
+        like JavaScript.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 86 -->
+<div class="flashcard">
+    <h3>What are "async" and "await" in JavaScript, and how are they used for handling asynchronous code?</h3>
+    <p>Answer: "async" and "await" are used for handling asynchronous code in a more synchronous style. "async" is used
+        to declare that a function returns a promise, and "await" is used to pause the execution until the promise is
+        resolved or rejected.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 87 -->
+<div class="flashcard">
+    <h3>Explain the concept of "destructuring" in JavaScript.</h3>
+    <p>Answer: Destructuring is a way to extract values from objects or arrays into variables. It provides a concise
+        syntax for assigning multiple variables at once, making code more readable and efficient.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 88 -->
+<div class="flashcard">
+    <h3>What is the purpose of the "fetch" API in JavaScript?</h3>
+    <p>Answer: The "fetch" API is used for making network requests in JavaScript. It provides a more modern and flexible
+        way to interact with remote resources, such as fetching data from a server.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 89 -->
+<div class="flashcard">
+    <h3>Explain the concept of "cross-origin resource sharing" (CORS) in web development.</h3>
+    <p>Answer: CORS is a security feature that allows or restricts web pages to request data from a different domain.
+        It's used to prevent unauthorized access to resources and protect user data.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+</div>
+
+<!-- Flashcard 90 -->
+<div class="flashcard">
+    <h3>What is the "spread operator" in JavaScript, and how is it used?</h3>
+    <p>Answer: The spread operator (three dots: "...") is used to spread the elements of an iterable (e.g., an array)
+        into a new array, object, or function call. It's a handy tool for copying, merging, or passing elements as
+        function arguments.</p>
+        <button class="navigation-button" onclick="showPreviousFlashcard()">Back</button>
+    <button class="navigation-button" onclick="showNextFlashcard()">Next Card</button>
+    </div>
+
+    <script>
+        const flashcards = document.querySelectorAll('.flashcard');
+        let currentCard = 0;
+        let completionMessage = null;
+    
+        function showFlashcard(cardIndex) {
+            flashcards.forEach(card => card.style.display = 'none');
+            flashcards[cardIndex].style.display = 'block';
+        }
+    
+        function showCompletionMessage() {
+            if (completionMessage === null) {
+                completionMessage = document.createElement('p');
+                completionMessage.textContent = "You've seen all the flashcards!";
+                completionMessage.classList.add('completion-message');
+                document.body.appendChild(completionMessage);
+            }
+        }
+    
+        function hideCompletionMessage() {
+            if (completionMessage !== null) {
+                document.body.removeChild(completionMessage);
+                completionMessage = null;
+            }
+        }
+    
+        const startOverButton = document.createElement('button');
+        startOverButton.textContent = 'Start Over';
+        startOverButton.style.display = 'none';
+        document.body.appendChild(startOverButton);
+    
+        startOverButton.addEventListener('click', () => {
+            currentCard = 0;
+            showFlashcard(currentCard);
+            hideCompletionMessage();
+            startOverButton.style.display = 'none';
+        });
+    
+        function showNextFlashcard() {
+            if (currentCard < flashcards.length - 1) {
+                currentCard++;
+                showFlashcard(currentCard);
+            } else {
+                showCompletionMessage();
+                startOverButton.style.display = 'block';
+            }
+        }
+    
+        function showPreviousFlashcard() {
+            if (currentCard > 0) {
+                currentCard--;
+                showFlashcard(currentCard);
+            }
+        }
+    
+        showFlashcard(currentCard);
+    </script>
+    
+    
+        </body>
+        
+        </html>
